@@ -30,7 +30,7 @@ def generate_pac(proxy):
         if intLines > 0:
             strLines = strLines + ','
         intLines = intLines + 1
-        strLines = strLines + "\n        ['%s', '%s']"%(ip, mask)    
+        strLines = strLines + "\n        ['%s', '%s']"%(ip, mask)
     strLines = strLines + (
         "\n    ];"
         "\n"
@@ -95,12 +95,12 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description="Generate proxy auto-config rules.")
     parser.add_argument('-x', '--proxy',
                         dest = 'proxy',
-                        default = 'SOCKS 127.0.0.1:8964',
+                        default = 'SOCKS 127.0.0.1:7070',
                         nargs = '?',
                         help = "Proxy Server, examples: "
-                               "SOCKS 127.0.0.1:8964; "
-                               "SOCKS5 127.0.0.1:8964; "
-                               "PROXY 127.0.0.1:8964")
+                               "SOCKS 127.0.0.1:7070; "
+                               "SOCKS5 127.0.0.1:7070; "
+                               "PROXY 127.0.0.1:7070")
 
     args = parser.parse_args()
 
